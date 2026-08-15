@@ -1,0 +1,443 @@
+(* ============================================================
+   ZINC LANGUAGE SPECIFICATION
+   Lexer Token Rules + EBNF Grammar
+   ============================================================ *)
+
+
+(* ============================================================
+   I. LEXICAL SPECIFICATION
+   ============================================================ *)
+
+(* ------------------------------------------------------------
+   1. Comments & Whitespace
+   ------------------------------------------------------------ *)
+
+LINE_COMMENT      ::= '//' { AnyCharExceptNewline } ;
+BLOCK_COMMENT     ::= '/*' { AnyChar } '*/' ;
+WHITESPACE        ::= ' ' | '\t' | '\n' | '\r' ;
+
+
+(* ------------------------------------------------------------
+   2. Keywords
+   ------------------------------------------------------------ *)
+
+KEYWORD           ::= 'let'
+                    | 'const'
+                    | 'int'
+                    | 'float'
+                    | 'bool'
+                    | 'str'
+                    | 'null'
+                    | 'true'
+                    | 'false'
+                    | 'fn'
+                    | 'ref'
+                    | 'class'
+                    | 'extends'
+                    | 'priv'
+                    | 'init'
+                    | 'this'
+                    | 'if'
+                    | 'else'
+                    | 'switch'
+                    | 'case'
+                    | 'default'
+                    | 'break'
+                    | 'try'
+                    | 'catch'
+                    | 'while'
+                    | 'for'
+                    | 'in'
+                    | 'import'
+                    | 'from'
+                    | 'enum'
+                    | 'return'
+                    | 'Map' ;
+
+
+(* ------------------------------------------------------------
+   3. Literals
+   ------------------------------------------------------------ *)
+
+INT_LITERAL       ::= Digit { Digit } ;
+
+FLOAT_LITERAL     ::= Digit { Digit } '.' Digit { Digit } ;
+
+BOOL_LITERAL      ::= 'true' | 'false' ;
+
+NULL_LITERAL      ::= 'null' ;
+
+STRING_LITERAL    ::= '"' { StringChar } '"' ;
+
+EscapeSequence    ::= '\' ( '"' | '`' | '\' | 'n' | 't' | 'r' | '0' | '{' ) ;
+
+StringChar        ::= EscapeSequence
+                    | AnyCharExceptDoubleQuoteBackslashOrNewline ;
+
+TEMPLATE_START    ::= '`' ;
+TEMPLATE_EXPR_START ::= '{' ;
+TEMPLATE_EXPR_END   ::= '}' ;
+TEMPLATE_END      ::= '`' ;
+
+
+(* ------------------------------------------------------------
+   4. Identifiers
+   ------------------------------------------------------------ *)
+
+IDENTIFIER        ::= Letter { Letter | Digit | '_' } ;
+
+Letter            ::= 'a'..'z'
+                    | 'A'..'Z'
+                    | '_' ;
+
+Digit             ::= '0'..'9' ;
+
+
+(* ------------------------------------------------------------
+   5. Operators
+   ------------------------------------------------------------ *)
+
+ARITHMETIC_OP     ::= '+'
+                    | '-'
+                    | '*'
+                    | '/'
+                    | '%'
+                    | '**' ;
+
+UPDATE_OP         ::= '++'
+                    | '--' ;
+
+RELATIONAL_OP     ::= '=='
+                    | '!='
+                    | '<'
+                    | '>'
+                    | '<='
+                    | '>=' ;
+
+LOGICAL_OP        ::= '&&'
+                    | '||'
+                    | '!' ;
+
+ASSIGNMENT_OP     ::= '='
+                    | '+='
+                    | '-='
+                    | '*='
+                    | '/=' ;
+
+LAMBDA_OP         ::= '=>' ;
+
+
+(* ------------------------------------------------------------
+   6. Punctuation
+   ------------------------------------------------------------ *)
+
+PUNCTUATION       ::= '{'
+                    | '}'
+                    | '['
+                    | ']'
+                    | '('
+                    | ')'
+                    | ':'
+                    | ';'
+                    | ','
+                    | '.'
+                    | '?' ;
+
+
+(* ============================================================
+   II. EBNF GRAMMAR SPECIFICATION
+   ============================================================ *)
+
+(* ------------------------------------------------------------
+   EBNF Notation
+
+   ::=       defines a production rule
+   'text'    terminal/token
+   [ x ]     optional, zero or one occurrence
+   { x }     zero or more occurrences
+   x | y     either x or y
+   ------------------------------------------------------------ *)
+
+
+(* ============================================================
+   1. Programs and Modules
+   ============================================================ *)
+
+Program           ::= { Statement } ;
+
+Statement         ::= ImportDecl
+                    | EnumDecl
+                    | ClassDecl
+                    | FnDecl
+                    | VarDecl ';'
+                    | ExprStmt ';'
+                    | IfExpr
+                    | SwitchStmt
+                    | TryExpr
+                    | WhileStmt
+                    | ForStmt
+                    | ReturnStmt ';'
+                    | BreakStmt ';' ;
+
+Block             ::= '{' { Statement } '}' ;
+
+ExprStmt          ::= Expr ;
+
+
+(* ============================================================
+   2. Imports
+   ============================================================ *)
+
+ImportDecl        ::= 'import' ImportPath ';'
+                    | 'import' '{' IdentifierList '}' 'from'
+                      ImportPath ';' ;
+
+ImportPath        ::= StringLiteral
+                    | Identifier { '.' Identifier } ;
+
+IdentifierList    ::= Identifier { ',' Identifier } ;
+
+
+(* ============================================================
+   3. Types and Nullability
+   ============================================================ *)
+
+Type              ::= BaseType [ '?' ] [ '[]' ] ;
+
+BaseType          ::= PrimitiveType
+                    | Identifier
+                    | MapType ;
+
+PrimitiveType     ::= 'int'
+                    | 'float'
+                    | 'bool'
+                    | 'str' ;
+
+MapType           ::= 'Map' '<' Type ',' Type '>' ;
+
+
+(* ============================================================
+   4. Declarations
+   ============================================================ *)
+
+VarDecl           ::= 'let'   Identifier [ '[]' ] '=' Expr
+                    | 'const' Identifier [ '[]' ] '=' Expr
+                    | BaseType [ '?' ] Identifier [ '[]' ] '=' Expr ;
+
+EnumDecl          ::= 'enum'
+                      Identifier
+                      '{'
+                      IdentifierList
+                      '}' ;
+
+ClassDecl         ::= 'class'
+                      Identifier
+                      [ 'extends' Identifier ]
+                      '{'
+                      { ClassMember }
+                      '}' ;
+
+(* class members are public by default; 'priv' is the only visibility *)
+(* keyword — there is no 'pub' for members since public is the default *)
+ClassMember       ::= [ 'priv' ] MemberVarDecl ';'
+                    | [ 'priv' ] MemberFnDecl
+                    | [ 'priv' ] ConstructorDecl ;
+
+MemberVarDecl     ::= 'let'   Identifier [ '[]' ] '=' Expr
+                    | 'const' Identifier [ '[]' ] '=' Expr
+                    | BaseType [ '?' ] Identifier [ '[]' ] '=' Expr ;
+
+MemberFnDecl      ::= 'fn'
+                      Identifier
+                      '(' [ ParamList ] ')'
+                      Block ;
+
+ConstructorDecl   ::= 'fn'
+                      'init'
+                      '(' [ ParamList ] ')'
+                      Block ;
+
+
+(* ============================================================
+   5. Functions and Lambdas
+   ============================================================ *)
+
+FnDecl            ::= 'fn'
+                      Identifier
+                      '(' [ ParamList ] ')'
+                      Block ;
+
+ParamList         ::= Param { ',' Param } ;
+
+Param             ::= [ 'ref' ] BaseType [ '?' ] Identifier [ '[]' ] ;
+
+LambdaExpr        ::= '(' [ IdentifierList ] ')'
+                      '=>'
+                      ( Expr | Block ) ;
+
+
+(* ============================================================
+   6. Control Flow
+   ============================================================ *)
+
+IfExpr            ::= 'if'
+                      Expr
+                      Block
+                      [ 'else' ( IfExpr | Block ) ] ;
+
+SwitchStmt        ::= 'switch'
+                      Expr
+                      '{'
+                      { CaseClause }
+                      [ DefaultClause ]
+                      '}' ;
+
+CaseClause        ::= 'case'
+                      Expr
+                      ':'
+                      { Statement } ;
+
+DefaultClause     ::= 'default'
+                      ':'
+                      { Statement } ;
+
+TryExpr           ::= 'try'
+                      Block
+                      'catch'
+                      '(' [ Type ] Identifier ')'
+                      Block ;
+
+WhileStmt         ::= 'while'
+                      Expr
+                      Block ;
+
+ForStmt           ::= 'for'
+                      ( Identifier 'in' Expr
+                      | VarDecl ';' Expr ';' Expr )
+                      Block ;
+
+ReturnStmt        ::= 'return' [ Expr ] ;
+
+BreakStmt         ::= 'break' ;
+
+
+
+(* ============================================================
+   7. Expressions
+   ============================================================ *)
+
+Expr              ::= AssignmentExpr ;
+
+AssignmentExpr    ::= LogicalExpr
+                      [ AssignmentOp Expr ] ;
+
+AssignmentOp      ::= '='
+                    | '+='
+                    | '-='
+                    | '*='
+                    | '/=' ;
+
+LogicalExpr       ::= RelationalExpr
+                      { ( '&&' | '||' ) RelationalExpr } ;
+
+RelationalExpr    ::= AdditiveExpr
+                      { ( '=='
+                        | '!='
+                        | '<'
+                        | '>'
+                        | '<='
+                        | '>=' )
+                        AdditiveExpr } ;
+
+AdditiveExpr      ::= MultiplicativeExpr
+                      { ( '+' | '-' )
+                        MultiplicativeExpr } ;
+
+MultiplicativeExpr
+                  ::= ExponentExpr
+                      { ( '*' | '/' | '%' )
+                        ExponentExpr } ;
+
+ExponentExpr      ::= UnaryExpr
+                      { '**' UnaryExpr } ;
+
+UnaryExpr         ::= ( '!'
+                    | '-'
+                    | '++'
+                    | '--' )
+                    UnaryExpr
+                    | PostfixExpr ;
+
+PostfixExpr       ::= PrimaryExpr
+                      { '++'
+                      | '--'
+                      | CallModifier
+                      | IndexModifier
+                      | PropertyModifier } ;
+
+CallModifier      ::= '(' [ ArgList ] ')' ;
+
+IndexModifier     ::= '[' Expr ']' ;
+
+PropertyModifier  ::= '.' Identifier ;
+
+ArgList           ::= Arg { ',' Arg } ;
+
+Arg               ::= [ 'ref' ] Expr ;
+
+
+(* ============================================================
+   8. Primary Expressions and Literals
+   ============================================================ *)
+
+PrimaryExpr       ::= NumberLiteral
+                    | BooleanLiteral
+                    | StringLiteral
+                    | TemplateString
+                    | 'null'
+                    | 'this'
+                    | Identifier
+                    | ArrayLiteral
+                    | MapLiteral
+                    | LambdaExpr
+                    | IfExpr
+                    | TryExpr
+                    | '(' Expr ')' ;
+
+NumberLiteral     ::= INT_LITERAL
+                    | FLOAT_LITERAL ;
+
+BooleanLiteral    ::= BOOL_LITERAL ;
+
+StringLiteral     ::= STRING_LITERAL ;
+
+ArrayLiteral      ::= '['
+                      [ Expr { ',' Expr } ]
+                      ']' ;
+
+MapLiteral        ::= '{'
+                      [ MapEntry { ',' MapEntry } ]
+                      '}' ;
+
+MapEntry          ::= StringLiteral ':' Expr ;
+
+TemplateString    ::= TEMPLATE_START
+                      { TemplateChar | TemplateExpr }
+                      TEMPLATE_END ;
+
+TemplateExpr      ::= TEMPLATE_EXPR_START
+                      Expr
+                      TEMPLATE_EXPR_END ;
+
+
+(* ============================================================
+   9. Template String Characters
+   ============================================================ *)
+
+TemplateChar      ::= EscapeSequence
+                    | AnyCharExceptBacktickBraceOrBackslash ;
+
+
+(* ============================================================
+   END OF ZINC EBNF SPECIFICATION
+   ============================================================ *)

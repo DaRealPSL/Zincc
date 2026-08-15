@@ -1,0 +1,63 @@
+import { io } from "std/io";
+
+enum Rarity{
+    Common,
+    Rare,
+    Legendary
+}
+
+class Bubble extends Item{
+    priv str name = "";
+    priv int value = 0;
+
+    fn init(str name, int value){
+        this.name = name;
+        this.value = value;
+    }
+
+    fn describe(){
+        return `{this.name} is worth {this.value}`;
+    }
+}
+
+fn sumAll(int nums[]){
+    let total = 0;
+    for n in nums{
+        total += n;
+    }
+    return total;
+}
+
+fn changeValue(ref int x){
+    x = x + 1;
+}
+
+let scores = [10, 20, 30];
+let total = sumAll(scores);
+
+changeValue(ref total);
+
+if total > 50{
+    io.print(`total is {total}`);
+}else{
+    io.print("total is low");
+}
+
+let config = {
+    "name": "bubble-factory",
+    "version": "1"
+};
+
+for let i = 0; i < scores[0]; i += 1{
+    io.print(`i is {i}`);
+}
+
+let double = (a, b) => a + b;
+
+str? nickname = null;
+
+try{
+    let risky = 10 / 0;
+}catch(err){
+    io.print(`caught: {err}`);
+}

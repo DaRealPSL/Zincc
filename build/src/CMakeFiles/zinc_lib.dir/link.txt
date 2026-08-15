@@ -1,0 +1,2 @@
+/usr/bin/ar qc libzinc_lib.a CMakeFiles/zinc_lib.dir/lexer/Token.cpp.o CMakeFiles/zinc_lib.dir/lexer/Lexer.cpp.o CMakeFiles/zinc_lib.dir/ast/AstPrinter.cpp.o CMakeFiles/zinc_lib.dir/parser/Parser.cpp.o CMakeFiles/zinc_lib.dir/sema/Type.cpp.o CMakeFiles/zinc_lib.dir/sema/Checker.cpp.o
+/usr/bin/ranlib libzinc_lib.a

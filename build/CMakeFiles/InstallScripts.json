@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/a147304/Documents/zinc/build/cmake_install.cmake",
+		"/Users/a147304/Documents/zinc/build/src/cmake_install.cmake",
+		"/Users/a147304/Documents/zinc/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
