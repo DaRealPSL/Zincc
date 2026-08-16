@@ -1,6 +1,6 @@
 src/CMakeFiles/zincc.dir/main.cpp.o: \
   /Users/a147304/Documents/zinc/src/main.cpp \
-  /Users/a147304/Documents/zinc/src/ast/AstPrinter.h \
+  /Users/a147304/Documents/zinc/src/lexer/Lexer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -792,7 +792,6 @@ src/CMakeFiles/zincc.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/bit_width.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/has_single_bit.h \
-  /Users/a147304/Documents/zinc/src/ast/Ast.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/comparison.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/vector.h \
@@ -878,10 +877,10 @@ src/CMakeFiles/zincc.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Users/a147304/Documents/zinc/src/lexer/Lexer.h \
   /Users/a147304/Documents/zinc/src/lexer/Token.h \
   /Users/a147304/Documents/zinc/src/parser/Parser.h \
-  /Users/a147304/Documents/zinc/src/sema/Checker.h \
+  /Users/a147304/Documents/zinc/src/ast/Ast.h \
+  /Users/a147304/Documents/zinc/src/runtime/Interpreter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/is_transparent.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/erase_if_container.h \
@@ -910,6 +909,10 @@ src/CMakeFiles/zincc.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind_back.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind_front.h \
+  /Users/a147304/Documents/zinc/src/runtime/Environment.h \
+  /Users/a147304/Documents/zinc/src/runtime/Value.h \
+  /Users/a147304/Documents/zinc/src/runtime/RuntimeError.h \
+  /Users/a147304/Documents/zinc/src/sema/Checker.h \
   /Users/a147304/Documents/zinc/src/sema/Type.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \

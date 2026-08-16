@@ -678,8 +678,9 @@ Type Checker::checkExpr(Expr* expr){
                     for(const Scope& s : scopes_){
                         if(s.vars.count(name)){ isVar = true; break; }
                     }
+                    bool isImported = importedGlobals_.count(name) > 0;
                     for(Arg& a : expr->args) checkExpr(a.value.get());
-                    if(!isVar){
+                    if(!isVar && !isImported){
                         error(expr->line, expr->column, "undefined function '" + name + "'");
                     }
                     return Type::makeUnknown();

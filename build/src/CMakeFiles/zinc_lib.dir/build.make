@@ -156,6 +156,48 @@ src/CMakeFiles/zinc_lib.dir/sema/Checker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/zinc_lib.dir/sema/Checker.cpp.s"
 	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a147304/Documents/zinc/src/sema/Checker.cpp -o CMakeFiles/zinc_lib.dir/sema/Checker.cpp.s
 
+src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o: src/CMakeFiles/zinc_lib.dir/flags.make
+src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o: /Users/a147304/Documents/zinc/src/runtime/Value.cpp
+src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o: src/CMakeFiles/zinc_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o -MF CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o.d -o CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o -c /Users/a147304/Documents/zinc/src/runtime/Value.cpp
+
+src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/zinc_lib.dir/runtime/Value.cpp.i"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/a147304/Documents/zinc/src/runtime/Value.cpp > CMakeFiles/zinc_lib.dir/runtime/Value.cpp.i
+
+src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/zinc_lib.dir/runtime/Value.cpp.s"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a147304/Documents/zinc/src/runtime/Value.cpp -o CMakeFiles/zinc_lib.dir/runtime/Value.cpp.s
+
+src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o: src/CMakeFiles/zinc_lib.dir/flags.make
+src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o: /Users/a147304/Documents/zinc/src/runtime/Interpreter.cpp
+src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o: src/CMakeFiles/zinc_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o -MF CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o.d -o CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o -c /Users/a147304/Documents/zinc/src/runtime/Interpreter.cpp
+
+src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.i"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/a147304/Documents/zinc/src/runtime/Interpreter.cpp > CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.i
+
+src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.s"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a147304/Documents/zinc/src/runtime/Interpreter.cpp -o CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.s
+
+src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o: src/CMakeFiles/zinc_lib.dir/flags.make
+src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o: /Users/a147304/Documents/zinc/src/runtime/Builtins.cpp
+src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o: src/CMakeFiles/zinc_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o -MF CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o.d -o CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o -c /Users/a147304/Documents/zinc/src/runtime/Builtins.cpp
+
+src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.i"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/a147304/Documents/zinc/src/runtime/Builtins.cpp > CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.i
+
+src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.s"
+	cd /Users/a147304/Documents/zinc/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/a147304/Documents/zinc/src/runtime/Builtins.cpp -o CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.s
+
 # Object files for target zinc_lib
 zinc_lib_OBJECTS = \
 "CMakeFiles/zinc_lib.dir/lexer/Token.cpp.o" \
@@ -163,7 +205,10 @@ zinc_lib_OBJECTS = \
 "CMakeFiles/zinc_lib.dir/ast/AstPrinter.cpp.o" \
 "CMakeFiles/zinc_lib.dir/parser/Parser.cpp.o" \
 "CMakeFiles/zinc_lib.dir/sema/Type.cpp.o" \
-"CMakeFiles/zinc_lib.dir/sema/Checker.cpp.o"
+"CMakeFiles/zinc_lib.dir/sema/Checker.cpp.o" \
+"CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o" \
+"CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o" \
+"CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o"
 
 # External object files for target zinc_lib
 zinc_lib_EXTERNAL_OBJECTS =
@@ -174,9 +219,12 @@ src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/ast/AstPrinter.cpp.o
 src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/parser/Parser.cpp.o
 src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/sema/Type.cpp.o
 src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/sema/Checker.cpp.o
+src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o
+src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o
+src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o
 src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/build.make
 src/libzinc_lib.a: src/CMakeFiles/zinc_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libzinc_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libzinc_lib.a"
 	cd /Users/a147304/Documents/zinc/build/src && $(CMAKE_COMMAND) -P CMakeFiles/zinc_lib.dir/cmake_clean_target.cmake
 	cd /Users/a147304/Documents/zinc/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zinc_lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -136,12 +136,12 @@ tests/clean: tests/CMakeFiles/checker_tests.dir/clean
 src/CMakeFiles/zinc_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target zinc_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Built target zinc_lib"
 .PHONY : src/CMakeFiles/zinc_lib.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/zinc_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/zinc_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/zinc_lib.dir/rule
@@ -153,7 +153,7 @@ zinc_lib: src/CMakeFiles/zinc_lib.dir/rule
 # codegen rule for target.
 src/CMakeFiles/zinc_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Finished codegen for target zinc_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Finished codegen for target zinc_lib"
 .PHONY : src/CMakeFiles/zinc_lib.dir/codegen
 
 # clean rule for target.
@@ -168,12 +168,12 @@ src/CMakeFiles/zinc_lib.dir/clean:
 src/CMakeFiles/zincc.dir/all: src/CMakeFiles/zinc_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/zincc.dir/build.make src/CMakeFiles/zincc.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/zincc.dir/build.make src/CMakeFiles/zincc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=14,15 "Built target zincc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=17,18 "Built target zincc"
 .PHONY : src/CMakeFiles/zincc.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/zincc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/zincc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/zincc.dir/rule
@@ -185,7 +185,7 @@ zincc: src/CMakeFiles/zincc.dir/rule
 # codegen rule for target.
 src/CMakeFiles/zincc.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/zincc.dir/build.make src/CMakeFiles/zincc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=14,15 "Finished codegen for target zincc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/a147304/Documents/zinc/build/CMakeFiles --progress-num=17,18 "Finished codegen for target zincc"
 .PHONY : src/CMakeFiles/zincc.dir/codegen
 
 # clean rule for target.
@@ -205,7 +205,7 @@ tests/CMakeFiles/lexer_tests.dir/all: src/CMakeFiles/zinc_lib.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/lexer_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/lexer_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/lexer_tests.dir/rule
@@ -237,7 +237,7 @@ tests/CMakeFiles/parser_tests.dir/all: src/CMakeFiles/zinc_lib.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/parser_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/parser_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/parser_tests.dir/rule
@@ -269,7 +269,7 @@ tests/CMakeFiles/checker_tests.dir/all: src/CMakeFiles/zinc_lib.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/checker_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/checker_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/a147304/Documents/zinc/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/checker_tests.dir/rule

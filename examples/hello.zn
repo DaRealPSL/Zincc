@@ -1,4 +1,4 @@
-import { io } from "std/io";
+import { print } from "std/io";
 
 enum Rarity{
     Common,
@@ -38,9 +38,15 @@ let total = sumAll(scores);
 changeValue(ref total);
 
 if total > 50{
-    io.print(`total is {total}`);
+    print(`total is {total}`);
+
+    // this currently fails because '+' requires both operands to be str (concatenation) or both numeric (addition).
+    // "total is " = string
+    // total = int
+    // = fail
+    //print("total is " + total);
 }else{
-    io.print("total is low");
+    print("total is low");
 }
 
 let config = {
@@ -49,7 +55,7 @@ let config = {
 };
 
 for let i = 0; i < scores[0]; i += 1{
-    io.print(`i is {i}`);
+    print(`i is {i}`);
 }
 
 let double = (a, b) => a + b;
@@ -59,5 +65,5 @@ str? nickname = null;
 try{
     let risky = 10 / 0;
 }catch(err){
-    io.print(`caught: {err}`);
+   print(`caught: {err}`);
 }

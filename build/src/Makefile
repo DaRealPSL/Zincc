@@ -264,6 +264,78 @@ parser/Parser.cpp.s:
 	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/parser/Parser.cpp.s
 .PHONY : parser/Parser.cpp.s
 
+runtime/Builtins.o: runtime/Builtins.cpp.o
+.PHONY : runtime/Builtins.o
+
+# target to build an object file
+runtime/Builtins.cpp.o:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o
+.PHONY : runtime/Builtins.cpp.o
+
+runtime/Builtins.i: runtime/Builtins.cpp.i
+.PHONY : runtime/Builtins.i
+
+# target to preprocess a source file
+runtime/Builtins.cpp.i:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.i
+.PHONY : runtime/Builtins.cpp.i
+
+runtime/Builtins.s: runtime/Builtins.cpp.s
+.PHONY : runtime/Builtins.s
+
+# target to generate assembly for a file
+runtime/Builtins.cpp.s:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.s
+.PHONY : runtime/Builtins.cpp.s
+
+runtime/Interpreter.o: runtime/Interpreter.cpp.o
+.PHONY : runtime/Interpreter.o
+
+# target to build an object file
+runtime/Interpreter.cpp.o:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o
+.PHONY : runtime/Interpreter.cpp.o
+
+runtime/Interpreter.i: runtime/Interpreter.cpp.i
+.PHONY : runtime/Interpreter.i
+
+# target to preprocess a source file
+runtime/Interpreter.cpp.i:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.i
+.PHONY : runtime/Interpreter.cpp.i
+
+runtime/Interpreter.s: runtime/Interpreter.cpp.s
+.PHONY : runtime/Interpreter.s
+
+# target to generate assembly for a file
+runtime/Interpreter.cpp.s:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.s
+.PHONY : runtime/Interpreter.cpp.s
+
+runtime/Value.o: runtime/Value.cpp.o
+.PHONY : runtime/Value.o
+
+# target to build an object file
+runtime/Value.cpp.o:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o
+.PHONY : runtime/Value.cpp.o
+
+runtime/Value.i: runtime/Value.cpp.i
+.PHONY : runtime/Value.i
+
+# target to preprocess a source file
+runtime/Value.cpp.i:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.i
+.PHONY : runtime/Value.cpp.i
+
+runtime/Value.s: runtime/Value.cpp.s
+.PHONY : runtime/Value.s
+
+# target to generate assembly for a file
+runtime/Value.cpp.s:
+	cd /Users/a147304/Documents/zinc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/zinc_lib.dir/build.make src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.s
+.PHONY : runtime/Value.cpp.s
+
 sema/Checker.o: sema/Checker.cpp.o
 .PHONY : sema/Checker.o
 
@@ -337,6 +409,15 @@ help:
 	@echo "... parser/Parser.o"
 	@echo "... parser/Parser.i"
 	@echo "... parser/Parser.s"
+	@echo "... runtime/Builtins.o"
+	@echo "... runtime/Builtins.i"
+	@echo "... runtime/Builtins.s"
+	@echo "... runtime/Interpreter.o"
+	@echo "... runtime/Interpreter.i"
+	@echo "... runtime/Interpreter.s"
+	@echo "... runtime/Value.o"
+	@echo "... runtime/Value.i"
+	@echo "... runtime/Value.s"
 	@echo "... sema/Checker.o"
 	@echo "... sema/Checker.i"
 	@echo "... sema/Checker.s"

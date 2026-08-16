@@ -1,7 +1,8 @@
-#include "ast/AstPrinter.h"
 #include "lexer/Lexer.h"
 #include "lexer/Token.h"
 #include "parser/Parser.h"
+#include "runtime/Interpreter.h"
+#include "runtime/RuntimeError.h"
 #include "sema/Checker.h"
 
 #include <fstream>
@@ -67,7 +68,13 @@ int main(int argc, char** argv){
         return 1;
     }
 
-    std::cout << zinc::printProgram(program);
+    zinc::Interpreter interpreter;
+    try{
+        interpreter.run(program);
+    }catch(const zinc::RuntimeException& e){
+        std::cerr << "runtime error:\n  " << e.error.line << ":" << e.error.column << "  " << e.error.message << "\n";
+        return 1;
+    }
+
     return 0;
 }
-

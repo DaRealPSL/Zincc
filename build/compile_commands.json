@@ -37,6 +37,24 @@
 },
 {
   "directory": "/Users/a147304/Documents/zinc/build/src",
+  "command": "/usr/bin/c++  -I/Users/a147304/Documents/zinc/src -g -std=gnu++20 -arch arm64 -Wall -Wextra -o CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o -c /Users/a147304/Documents/zinc/src/runtime/Value.cpp",
+  "file": "/Users/a147304/Documents/zinc/src/runtime/Value.cpp",
+  "output": "src/CMakeFiles/zinc_lib.dir/runtime/Value.cpp.o"
+},
+{
+  "directory": "/Users/a147304/Documents/zinc/build/src",
+  "command": "/usr/bin/c++  -I/Users/a147304/Documents/zinc/src -g -std=gnu++20 -arch arm64 -Wall -Wextra -o CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o -c /Users/a147304/Documents/zinc/src/runtime/Interpreter.cpp",
+  "file": "/Users/a147304/Documents/zinc/src/runtime/Interpreter.cpp",
+  "output": "src/CMakeFiles/zinc_lib.dir/runtime/Interpreter.cpp.o"
+},
+{
+  "directory": "/Users/a147304/Documents/zinc/build/src",
+  "command": "/usr/bin/c++  -I/Users/a147304/Documents/zinc/src -g -std=gnu++20 -arch arm64 -Wall -Wextra -o CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o -c /Users/a147304/Documents/zinc/src/runtime/Builtins.cpp",
+  "file": "/Users/a147304/Documents/zinc/src/runtime/Builtins.cpp",
+  "output": "src/CMakeFiles/zinc_lib.dir/runtime/Builtins.cpp.o"
+},
+{
+  "directory": "/Users/a147304/Documents/zinc/build/src",
   "command": "/usr/bin/c++  -I/Users/a147304/Documents/zinc/src -g -std=gnu++20 -arch arm64 -Wall -Wextra -o CMakeFiles/zincc.dir/main.cpp.o -c /Users/a147304/Documents/zinc/src/main.cpp",
   "file": "/Users/a147304/Documents/zinc/src/main.cpp",
   "output": "src/CMakeFiles/zincc.dir/main.cpp.o"
