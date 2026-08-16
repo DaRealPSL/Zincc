@@ -31,46 +31,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d879286d-a68d-4c61-977f-a28a6abd53b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/runtime/Builtins.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Builtins.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Environment.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Environment.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Interpreter.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Interpreter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/RuntimeError.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Value.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runtime/Value.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/compile_commands.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/sema/Checker.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zinc_lib.dir/sema/Checker.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/main.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/zincc.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/libzinc_lib.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/libzinc_lib.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/zincc" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/zincc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tests/CMakeFiles/checker_tests.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/tests/CMakeFiles/checker_tests.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tests/CMakeFiles/lexer_tests.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/tests/CMakeFiles/lexer_tests.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tests/CMakeFiles/parser_tests.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/tests/CMakeFiles/parser_tests.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tests/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/tests/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tests/checker_tests" beforeDir="false" afterPath="$PROJECT_DIR$/build/tests/checker_tests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/hello.zn" beforeDir="false" afterPath="$PROJECT_DIR$/examples/hello.zn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sema/Checker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/sema/Checker.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="d879286d-a68d-4c61-977f-a28a6abd53b4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1786662095935</updated>
-      <workItem from="1786662097513" duration="18305000" />
+      <workItem from="1786662097513" duration="18638000" />
     </task>
     <servers />
   </component>
