@@ -25,13 +25,18 @@
       <config projectName="zinc" targetName="checker_tests" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d879286d-a68d-4c61-977f-a28a6abd53b4" name="Changes" comment="" />
+    <list default="true" id="d879286d-a68d-4c61-977f-a28a6abd53b4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FIXME.md" beforeDir="false" afterPath="$PROJECT_DIR$/FIXME.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/hello.zn" beforeDir="false" afterPath="$PROJECT_DIR$/examples/hello.zn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sema/Checker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/sema/Checker.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +46,13 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -69,6 +81,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
@@ -83,15 +96,13 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C++&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.zincc">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
+  <component name="RunManager" selected="CMake Debug.zinc">
+    <configuration name="zinc" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
+      <method v="2" />
     </configuration>
     <configuration name="checker_tests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="zinc" TARGET_NAME="checker_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="zinc" RUN_TARGET_NAME="checker_tests">
       <method v="2">
@@ -124,6 +135,7 @@
       <item itemvalue="CMake Application.checker_tests" />
       <item itemvalue="CMake Application.lexer_tests" />
       <item itemvalue="CMake Application.parser_tests" />
+      <item itemvalue="CMake Debug.zinc" />
     </list>
   </component>
   <component name="RustProjectSettings">
@@ -136,7 +148,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1786662095935</updated>
-      <workItem from="1786662097513" duration="18638000" />
+      <workItem from="1786662097513" duration="23192000" />
+      <workItem from="1787350611023" duration="504000" />
+      <workItem from="1787693777313" duration="1704000" />
+      <workItem from="1787779760615" duration="1314000" />
+      <workItem from="1787781207054" duration="9000" />
+      <workItem from="1788644965867" duration="5000" />
     </task>
     <servers />
   </component>

@@ -328,7 +328,7 @@ void Checker::checkStmt(Stmt* stmt){
             break; //already collected
 
         case StmtKind::ClassDecl:
-            for(ClassMemberNode& member : stmt->members){
+            for(ClassMemberNode& member : const_cast<std::vector<ClassMemberNode>&>(stmt->members)){
                 if(member.kind == ClassMemberNode::Kind::Var){
                     pushScope();
                     currentClassName_ = stmt->name;
@@ -542,15 +542,6 @@ Type Checker::checkExpr(Expr* expr){
         }
 
         case ExprKind::MapLiteral:{
-            //NOTE (see FIXME.md #4): map literals are currently required to
-            //be homogeneous - this loop unifies every value's type and
-            //errors on the first incompatible one. Whether Zinc eventually
-            //wants heterogeneous maps (via Any, a union type, or staying
-            //homogeneous) hasn't been decided; that decision isn't made
-            //here. If/when it is, this is the one place that needs to
-            //change - it's intentionally isolated from the rest of the
-            //checker (isAssignable/unify aren't otherwise involved in this
-            //specific homogeneity rule).
             if(expr->mapEntries.empty()) return Type::makeMap(Type::makeStr(), Type::makeUnknown());
             Type val = checkExpr(expr->mapEntries[0].value.get());
             for(size_t i = 1; i < expr->mapEntries.size(); i++){
@@ -678,9 +669,8 @@ Type Checker::checkExpr(Expr* expr){
                     for(const Scope& s : scopes_){
                         if(s.vars.count(name)){ isVar = true; break; }
                     }
-                    bool isImported = importedGlobals_.count(name) > 0;
                     for(Arg& a : expr->args) checkExpr(a.value.get());
-                    if(!isVar && !isImported){
+                    if(!isVar){
                         error(expr->line, expr->column, "undefined function '" + name + "'");
                     }
                     return Type::makeUnknown();
@@ -783,30 +773,7 @@ Type Checker::checkExpr(Expr* expr){
             Type right = checkExpr(expr->right.get());
             const std::string& op = expr->text;
 
-            if(op == "+"){
-                bool leftIsStr = (left.kind == TypeKind::Str);
-                bool rightIsStr = (right.kind == TypeKind::Str);
-                if(leftIsStr && rightIsStr){
-                    if(left.nullable || right.nullable){
-                        error(expr->line, expr->column, "value may be null; check for null before using '+' on a str?");
-                    }
-                    return Type::makeStr();
-                }
-                if(leftIsStr || rightIsStr){
-                    error(expr->line, expr->column, "'+' requires both operands to be str (concatenation) or both numeric (addition), got "
-                          + typeToString(left) + " and " + typeToString(right));
-                    return Type::makeUnknown();
-                }
-                if(!left.isUnknown() && !left.isNumeric()){
-                    error(expr->line, expr->column, "'+' requires numeric or str operands, got " + typeToString(left));
-                }
-                if(!right.isUnknown() && !right.isNumeric()){
-                    error(expr->line, expr->column, "'+' requires numeric or str operands, got " + typeToString(right));
-                }
-                if(left.kind == TypeKind::Float || right.kind == TypeKind::Float) return Type::makeFloat();
-                return Type::makeInt();
-            }
-            if(op == "-" || op == "*" || op == "/" || op == "%" || op == "**"){
+            if(op == "+" || op == "-" || op == "*" || op == "/" || op == "%" || op == "**"){
                 if(!left.isUnknown() && !left.isNumeric()){
                     error(expr->line, expr->column, "'" + op + "' requires numeric operands, got " + typeToString(left));
                 }

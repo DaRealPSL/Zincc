@@ -44,7 +44,7 @@ if total > 50{
     // "total is " = string
     // total = int
     // = fail
-    //print("total is " + total);
+    print("total is " + total);
 }else{
     print("total is low");
 }
